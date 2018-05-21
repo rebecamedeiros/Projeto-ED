@@ -1,3 +1,4 @@
+
 /*
  * lista.c
  *
@@ -5,4 +6,10 @@
  *      Author: rebeca
  */
 
+ #include "lista.h"
+ #include <stdio.h>
+ #include <stdlib.h>
 
+tNo *getNo (tNomes a){
+
+}

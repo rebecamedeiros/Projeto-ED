@@ -19,4 +19,13 @@ typedef struct No{
 
 extern tNo *getNo(tNomes a);
 
+extern void IniciaLista(const tNo *lista);
+
+extern int ListaVazia(const tNo *lista);
+
+extern void AdicionaNome(tNo *lista, tNomes nome);
+
+//função para ordenar por frequência
+
+
 #endif /* LISTA_H_ */
