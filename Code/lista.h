@@ -19,13 +19,21 @@ typedef struct No{
 
 extern tNo *getNo(tNomes a);
 
-extern void IniciaLista(const tNo *lista);
+extern void CriarLista(tNo **lista);
 
-extern int ListaVazia(const tNo *lista);
+extern char InserirNome(tNo **lista, tNomes nome, char indice);
 
-extern void AdicionaNome(tNo *lista, tNomes nome);
+extern char ListaVazia(const tNo *lista);
 
-//fun��o para ordenar por frequ�ncia
+// Função para contar quantas vezes o nome aparece na lista
+// Os valores encontrados vão ser usados na função OrdenarNomes
+extern int FrequenciaNome();
 
+// A função vai receber os valores de FrequenciaNome e ordenar os nomes
+// de acordo com os valores
+extern void OrdenarNomes();
+
+// Exibir os nomes ordenados
+extern void ExibirLista(const tNo *lista);
 
 #endif /* LISTA_H_ */

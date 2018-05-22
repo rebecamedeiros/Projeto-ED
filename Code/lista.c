@@ -1,4 +1,3 @@
-
 /*
  * lista.c
  *
@@ -6,10 +5,22 @@
  *      Author: rebeca
  */
 
- #include "lista.h"
- #include <stdio.h>
- #include <stdlib.h>
+#include "lista.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-tNo *getNo (tNomes a){
+// Criando um novo nó
+tNo *getNo(tNomes a){
 
+	tNo *novono;
+
+	nn = malloc(sizeof(tNo));
+
+	if(nn != NULL){
+		novono->n = a;
+		novono->proximo = NULL;
+	}
+
+	return novono;
 }
+
