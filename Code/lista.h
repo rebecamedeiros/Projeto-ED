@@ -14,26 +14,25 @@ typedef char tNomes;
 
 typedef struct No{
 	tNomes n;
+	int frequencia; // Vari√°vel para contagem
 	struct no *proximo;
 }tNo;
 
 extern tNo *getNo(tNomes a);
 
-extern void ExcluirNo(tNo *no);
-
 extern void CriarLista(tNo **lista);
 
-extern char InserirNome(tNo **lista, tNomes nome, int indice);
+extern char InserirNome(tNo **lista, tNomes nome, char indice);
 
 extern char ListaVazia(const tNo *lista);
 
-// FunÁ„o para contar quantas vezes o nome aparece na lista
-// Os valores encontrados v„o ser usados na funÁ„o OrdenarNomes
+// Fun√ß√£o para contar quantas vezes o nome aparece na lista
+// Os valores encontrados v√£o ser usados na fun√ß√£o OrdenarNomes
 extern int FrequenciaNome();
 
-// A funÁ„o vai receber os valores de FrequenciaNome e ordenar os nomes
+// A fun√ß√£o vai receber os valores de FrequenciaNome e ordenar os nomes
 // de acordo com os valores
-extern void OrdenarNomes();
+//extern void OrdenarNomes();
 
 // Exibir os nomes ordenados
 extern void ExibirLista(const tNo *lista);

@@ -9,12 +9,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Criando um novo nÛ
+// Criando um novo n√≥
 tNo *getNo(tNomes a){
 
 	tNo *novono;
 
-	// Alocando espaco do novo nÛ
+	// Alocando espaco do novo n√≥
 	novono = malloc(sizeof(tNo));
 
 	if(novono != NULL){
@@ -26,12 +26,12 @@ tNo *getNo(tNomes a){
 }
 
 void ExcluirNo(tNo *no){
-    // Liberando o espaÁo de memÛria ocupado pelo nÛ
+    // Liberando o espa√ßo de mem√≥ria ocupado pelo n√≥
     free(no);
 }
 
 void CriarLista(tNo **lista){
-    // Iniciando o primeiro nÛ como NULL
+    // Iniciando o primeiro n√≥ como NULL
     *lista = NULL;
 }
 
@@ -74,5 +74,9 @@ char InserirNome(tNo **lista, tNomes nome, int indice){
 }
 
 int FrequenciaNome(){
+	// Usar a fun√ß√£o de string para comparar as fun√ß√µes strcmp() ou strncmp()
+	// E todas as vezes que forem iguais retorna 0
+	// E vai incrementando o contador para esse nome
+
 
 }
