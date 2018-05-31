@@ -22,16 +22,18 @@ int main(){
 
     int op;
 
-    if(op == 5){
-        break;
-    }
-
     while(1){
 
         ApresentaMenu();
 
         printf("\n\t ESCOLHA UMA OPCAO: ");
         scanf("%d", &op);
+
+
+        if(op == 5){
+            break;
+        }
+
 
         switch(op){
             case 1:
