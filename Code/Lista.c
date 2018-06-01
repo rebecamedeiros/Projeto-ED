@@ -11,7 +11,7 @@ tNo *getNo(tNomes s){
 
     if(nn != NULL){
 
-        nn->n = s
+        nn->n = s;
         nn->proximo = NULL;
 
     }
@@ -38,8 +38,19 @@ void IniciaLista(tNo **ListaNomes){
 
 }*/
 
-void InserirNomes(tNo **ListaNomes, int indice, char nm){
+void InserirNomes(tNo **ListaNomes, int indice, char *nm){
+	
+	tNo *novono = getNo(nm);
 
+	if(head == NULL){
+		head = novono;
+		novono->proximo = NULL;
+	} else {
+		novono->proximo = head;
+		head = novono;
+	}
+
+	printf("\n NOVO NOME ADICIONADO");
 }
 
 
