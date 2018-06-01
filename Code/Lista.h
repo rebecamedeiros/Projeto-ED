@@ -19,5 +19,7 @@ extern void IniciaLista(tNo **ListaNomes);
 
 //extern int ListaVazia(const tNo *ListaNomes);
 
+extern void InserirNome(tNo **ListaNomes, int indice, char nm);
+
 #endif // LISTA_H_
 

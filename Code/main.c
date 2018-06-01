@@ -22,6 +22,8 @@ int main(){
 
     int op;
 
+    char nomes[MAX_NOME];
+
     while(1){
 
         ApresentaMenu();

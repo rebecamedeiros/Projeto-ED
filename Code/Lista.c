@@ -38,8 +38,9 @@ void IniciaLista(tNo **ListaNomes){
 
 }*/
 
+void InserirNomes(tNo **ListaNomes, int indice, char nm){
 
-
+}
 
 
 
