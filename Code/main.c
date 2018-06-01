@@ -40,6 +40,9 @@ int main(){
         switch(op){
             case 1:
                 //Inserir novo nome
+		printf("\n DIGITE O NOME: ");
+		scanf("%s", &nomes);
+		
                 break;
             case 2:
                 // Exibir nome
