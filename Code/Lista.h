@@ -7,9 +7,11 @@ typedef char tNomes;
 
 typedef struct No{
 	//int freq;
-	tNomes n[MAX_NOME];     // nomes
+	tNomes *n[MAX_NOME];     // nomes
 	struct No *proximo;
 } tNo;
+
+tNo *head = NULL;
 
 extern tNo *getNo(tNomes s);
 
