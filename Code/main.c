@@ -44,6 +44,7 @@ int main(){
                 break;
             case 2:
                 // Exibir nomes
+                break;
             default:
                 printf("\n Escolha invalida");
                 break;
