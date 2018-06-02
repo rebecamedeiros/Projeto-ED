@@ -10,11 +10,16 @@ typedef struct no{
     struct no *proximo;
 } tNo;
 
+
+tNo *head = NULL;
+
 extern tNo *getNo(tNomes s);
+
+extern void ExcluirNo(tNo *no);
 
 extern void CriarLista(tNo **listanomes);
 
-extern int InserirNovoNome(tNomes **listanomes, char word);
+extern void InserirNovoNome(tNomes **listanomes, char word);
 
 extern void ImprimirLista(const tNo *listanomes);
 
