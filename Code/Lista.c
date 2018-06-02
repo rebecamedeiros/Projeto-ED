@@ -21,26 +21,26 @@ void ExcluirNo(tNo *no){
     free(no);
 }
 
-void CriarLista(tNo **listanomes){
-    *listanomes = NULL;
+void CriarLista(tNo **head){
+    *head = NULL;
 }
 
-int ListaVazia(const tNo *listanomes){
-    return listanomes == NULL;
+int ListaVazia(const tNo *head){
+    return head == NULL;
 }
 
-void InserirNovoNome(tNomes **listanomes, char word){
+void InserirNovoNome(tNomes **head, char word){
     /*if(novonome == NULL){
         printf("\n Sem memoria para o novo nome");
         return 1;
     }
 
-    if(*listanomes == NULL){
-        *listanomes =  novonome;
+    if(*head == NULL){
+        *head =  novonome;
         return 0;
     }
 
-    tNo *no = *listanomes;
+    tNo *no = *head;
 
     while(no->proximo != NULL){
         no = no->proximo;
@@ -49,7 +49,7 @@ void InserirNovoNome(tNomes **listanomes, char word){
     no->proximo = novonome;*/
     tNo *novonome = getNo(word);
 
-    if(ListaVazia(listanomes)){
+    if(ListaVazia(head)){
         printf("\n A lista esta vazia");
     }
 
@@ -67,8 +67,8 @@ void InserirNovoNome(tNomes **listanomes, char word){
 
 }
 
-void ImprimirLista(const tNo *listanomes){
-    /*const tNo *no = listanomes;
+void ImprimirLista(const tNo *head){
+    /*const tNo *no = head;
 
     int i = 0;
 
@@ -81,7 +81,7 @@ void ImprimirLista(const tNo *listanomes){
 
     int i = 0;
 
-    if(ListaVazia(listanomes)){
+    if(ListaVazia(head)){
         printf("\n A lista esta vazia");
     } else {
         tNo *no = head;
