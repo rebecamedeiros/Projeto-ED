@@ -21,18 +21,34 @@ void CriarLista(tNo **listanomes){
     *listanomes = NULL;
 }
 
-void InserirNovoNome(tNomes **listanomes, char word){
-    tNo *novono = getNo(word);
+int ListaVazia(const tNo *listanomes){
+    return listanomes == NULL;
+}
 
-    if(novono == NULL){
-        novono = word;
-        novono->proximo = NULL;
-    } else {
-        novono->proximo = novono;
-        novono = word;
+int InserirNovoNome(tNomes **listanomes, char word){
+    tNo *novonome = getNo(word);
+
+    if(novonome == NULL){
+        printf("\n Sem espaco de memoria");
+        return 1;
     }
 
+    if(ListaVazia(*listanomes)){
+        *listanomes = novonome;
+        return 0;
+    }
+
+    tNo *no = *listanomes;
+
+    while(no->proximo != NULL){
+        no = no->proximo;
+    }
+
+    no->proximo = novonome;
+
     printf("\n O novo nome foi adicionado");
+
+    return 0;
 }
 
 void ImprimirLista(const tNo *listanomes){
