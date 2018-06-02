@@ -17,7 +17,7 @@ extern void ExcluirNo(tNo *no);
 
 extern void CriarLista(tNo **listanomes);
 
-extern void InserirNovoNome(tNo **listanomes, tNomes word);
+extern int InserirNovoNome(tNo **listanomes, tNomes w);
 
 extern void ImprimirLista(const tNo *listanomes);
 

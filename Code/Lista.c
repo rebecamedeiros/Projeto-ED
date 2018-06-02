@@ -13,7 +13,6 @@ tNo *CriarNovoNo(tNomes str){ // Ok
                      // Não apresenta erro sem ele
         n->proximo = NULL;
     }
-
     return n;
 }
 
@@ -29,44 +28,25 @@ int ListaVazia(const tNo *listanomes){
     return listanomes == NULL;
 }
 
-void InserirNovoNome(tNo **listanomes, tNomes word){
-    tNo *novonome = CriarNovoNo(word);
+int InserirNovoNome(tNo **listanomes, tNomes w){
+    tNo *novonome = CriarNovoNo(w);
 
     if(novonome == NULL){
-        printf("\n Sem memoria para o novo nome");
+        printf("\n Sem espaco para o nome");
         return 1;
     }
 
-    if(ListaVazia(listanomes)){
-        *listanomes =  novonome;
-        return 0;
-    }
-
-    tNo *no = *listanomes;
-
-    while(no->proximo != NULL){
-        no = no->proximo;
-    }
-
-    no->proximo = novonome;
-
-    /*tNo *novonome = getNo(word);
-
-    if(ListaVazia(listanomes)){
-        printf("\n A lista esta vazia");
-    }
-
-    novonome->nome = word;
-
-    if(listanomes == NULL){
+    if(ListaVazia(*listanomes)){
         novonome->proximo = NULL;
         listanomes = novonome;
     } else {
         novonome->proximo = listanomes;
         listanomes = novonome;
-    }*/
+    }
 
     printf("\n\n O novo nome foi adicionado");
+
+    return 0;
 
 }
 
@@ -82,16 +62,18 @@ void ImprimirLista(const tNo *listanomes){
      //   i++;
     //}
 
-
     if(ListaVazia(listanomes)){
         printf("\n A lista esta vazia");
+    } else {
+        while(no != NULL){
+            printf("[%d] = %s", i, no->nome);
+            no = no->proximo;
+
+            i++;
+        }
     }
 
-    while(no != NULL){
-        printf("[%d] = %s ", i, no->nome);
-        no = no->proximo;
-        i++;
-    }
+
     //printf("[%d] = %s ", i, no->nome); // Ultimo elemento da lista apontando para NULL
 
 
