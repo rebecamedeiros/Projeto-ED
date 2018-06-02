@@ -16,7 +16,7 @@ tNo *CriarNovoNo(char a){
 	no = malloc(sizeof(tNo));
 
 	if(no != NULL){
-		strcpy(no->n, a);
+		no->n = a;
 		no->proximo = NULL;
 	}
 
