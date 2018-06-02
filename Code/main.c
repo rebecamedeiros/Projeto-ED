@@ -44,6 +44,9 @@ int main(){
                 break;
             case 2:
                 // Exibir nomes
+                printf("\n Os nomes presentes na lista sao:");
+
+                ImprimirLista(&novalista);
                 break;
             default:
                 printf("\n Escolha invalida");

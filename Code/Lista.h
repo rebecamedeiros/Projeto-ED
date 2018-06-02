@@ -16,5 +16,7 @@ extern void CriarLista(tNo **listanomes);
 
 extern void InserirNovoNome(tNomes **listanomes, char word);
 
+extern void ImprimirLista(const tNo *listanomes);
+
 #endif // LISTA_H_
 

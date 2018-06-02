@@ -35,6 +35,20 @@ void InserirNovoNome(tNomes **listanomes, char word){
     printf("\n O novo nome foi adicionado");
 }
 
+void ImprimirLista(const tNo *listanomes){
+    const tNo *no = listanomes;
+
+    int i = 0;
+
+    while(no != NULL){
+        printf("[%d] = %s \n", i, no->nome);
+        no = no->proximo;
+
+        i++;
+    }
+
+}
+
 
 
 
