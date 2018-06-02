@@ -11,15 +11,15 @@ typedef struct no{
 } tNo;
 
 
-extern tNo *getNo(tNomes s);
+extern tNo *CriarNovoNo(tNomes str);
 
 extern void ExcluirNo(tNo *no);
 
-extern void CriarLista(tNo **head);
+extern void CriarLista(tNo **listanomes);
 
-extern void InserirNovoNome(tNomes **head, char word);
+extern void InserirNovoNome(tNo **listanomes, tNomes word);
 
-extern void ImprimirLista(const tNo *head);
+extern void ImprimirLista(const tNo *listanomes);
 
 #endif // LISTA_H_
 
