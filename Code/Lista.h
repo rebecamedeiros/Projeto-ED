@@ -5,23 +5,16 @@
 
 typedef char tNomes;
 
-typedef struct No{
-	//int freq;
-	tNomes *n[MAX_NOME];     // nomes
-	struct No *proximo;
+typedef struct no{
+    tNomes *nome;
+    struct no *proximo;
 } tNo;
-
-tNo *head = NULL;
 
 extern tNo *getNo(tNomes s);
 
-extern void ExcluirNo(tNo *no);
+extern void CriarLista(tNo **listanomes);
 
-extern void IniciaLista(tNo **ListaNomes);
 
-//extern int ListaVazia(const tNo *ListaNomes);
-
-extern void InserirNome(tNo **ListaNomes, int indice, char nm);
 
 #endif // LISTA_H_
 

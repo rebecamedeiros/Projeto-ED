@@ -4,56 +4,17 @@
 #include "Lista.h"
 
 tNo *getNo(tNomes s){
+    tNo *n;
 
-    tNo *nn;
+    n = malloc(sizeof(tNo));
 
-    nn = malloc(sizeof(tNo));
-
-    if(nn != NULL){
-
-        nn->n = s;
-        nn->proximo = NULL;
-
+    if(n != NULL){
+        n->nome = s;
+        n->proximo = NULL;
     }
 
-    return nn;
-
+    return n;
 }
-
-void ExcluirNo(tNo *no){
-
-    free(no);
-
-}
-
-void IniciaLista(tNo **ListaNomes){
-
-    *ListaNomes = NULL;
-
-}
-
-/*int ListaVazia(const tNo *ListaNomes){
-
-    return ListaNomes == NULL;
-
-}*/
-
-void InserirNomes(tNo **ListaNomes, int indice, char *nm){
-	
-	tNo *novono = getNo(nm);
-
-	if(head == NULL){
-		head = novono;
-		novono->proximo = NULL;
-	} else {
-		novono->proximo = head;
-		head = novono;
-	}
-
-	printf("\n NOVO NOME ADICIONADO");
-}
-
-
 
 
 
