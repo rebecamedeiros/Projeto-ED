@@ -14,9 +14,46 @@ void ApresentaMenu(){
 
 int main(){
 
-    ApresentaMenu();
+    tNo novalista;
+
+    CriarLista(&novalista);
+
+    int op;
+
+    char nomes;
 
 
+    while(1){
+        ApresentaMenu();
+
+        printf("\n Escolha uma das opcoes: ");
+        scanf("%d", &op);
+
+        if(op == 3){
+            break;
+        }
+
+        switch(op){
+            case 1:
+                // Inserir novo nome
+
+                printf("\n Escreva o nome: ");
+                scanf("%s", &nomes);
+
+                InserirNovoNome(&novalista, nomes);
+                break;
+            case 2:
+                // Exibir nomes
+            default:
+                printf("\n Escolha invalida");
+                break;
+
+        }
+
+
+    }
+
+    printf("\n Programa encerrado!");
 
     return 0;
 

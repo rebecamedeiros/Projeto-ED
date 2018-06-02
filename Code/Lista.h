@@ -6,7 +6,7 @@
 typedef char tNomes;
 
 typedef struct no{
-    tNomes *nome;
+    tNomes *nome;       // Depois adicionar o MAX_NOME
     struct no *proximo;
 } tNo;
 
@@ -14,7 +14,7 @@ extern tNo *getNo(tNomes s);
 
 extern void CriarLista(tNo **listanomes);
 
-
+extern void InserirNovoNome(tNomes **listanomes, char word);
 
 #endif // LISTA_H_
 
