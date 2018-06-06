@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1528243314 source:c:\users\tsukiyo alex\documents\ufpb\estrutura de dados\projetoed\lista.cpp
+	"lista.h"
+	<iostream>
+	<fstream>
+	<stdlib.h>
+
+1528243102 c:\users\tsukiyo alex\documents\ufpb\estrutura de dados\projetoed\lista.h
+	<string>
+
