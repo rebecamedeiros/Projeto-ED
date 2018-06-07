@@ -8,10 +8,10 @@ static int EstaCheia(const tLista *lista)
     return lista->nElementos >= MAX_ELEMENTOS;
 }
 
-void CriaAluno(tAluno aluno, std::string nomedoaluno)
+void CriaAluno(tAluno *aluno, std::string nomedoaluno)
 {
-    aluno.nome = nomedoaluno;
-    aluno.numocc = 1;
+    aluno->nome = nomedoaluno;
+    aluno->numocc = 1;
 }
 
 void IniciaLista(tLista *lista)
@@ -82,4 +82,21 @@ void ExibeLista(const tLista *lista)
     for(int i = 0; i < Comprimento(lista); i++){
         std::cout << i << " - " << ObtemElemento(lista,i).nome << " (" << ObtemElemento(lista,i).numocc << ")" << std::endl;
     }
+}
+
+void OrdenaLista(tLista *lista)
+{
+    int j = Comprimento(lista)-1;
+        while(j > 0){
+            for(int i = 0; i < j; i++){
+                tAluno *x = &lista->alunos[i];
+                tAluno *y = &lista->alunos[i+1];
+                if(x->numocc < y->numocc){
+                    tAluno auxiliar = *x;
+                    *x = *y;
+                    *y = auxiliar;
+                }
+            }
+            j--;
+        }
 }

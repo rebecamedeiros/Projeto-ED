@@ -16,7 +16,7 @@ struct tLista
     tAluno alunos[MAX_ELEMENTOS];
 };
 
-extern void CriaAluno (tAluno aluno, std::string nomedoaluno);
+extern void CriaAluno (tAluno *aluno, std::string nomedoaluno);
 extern void IniciaLista(tLista *lista);
 extern int Comprimento (const tLista *lista);
 extern tAluno ObtemElemento(const tLista *lista, int indice);
@@ -25,5 +25,6 @@ extern int EstaVazia(const tLista *lista);
 extern int AcrescentaElemento(tLista *lista, tAluno aluno);
 extern int BuscaElemento(const tLista *lista, tAluno aluno);
 extern void ExibeLista(const tLista *lista);
+extern void OrdenaLista(tLista *lista);
 
 #endif // LISTA_H_INCLUDED

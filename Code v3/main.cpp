@@ -10,7 +10,7 @@ int main()
     tLista listaED;
     IniciaLista(&listaED);
     while(std::getline(in, nomedoaluno)){
-        CriaAluno(novoAluno, nomedoaluno);
+        CriaAluno(&novoAluno, nomedoaluno);
         if(BuscaElemento(&listaED,novoAluno) == -1){
             AcrescentaElemento(&listaED,novoAluno);
         }
@@ -19,18 +19,8 @@ int main()
         }
     }
 
+    OrdenaLista(&listaED);
     ExibeLista(&listaED);
 
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
